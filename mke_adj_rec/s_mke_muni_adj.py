@@ -5,12 +5,12 @@ from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from mkemunicourtdb import *
+from mke_adj_rec_db import *
 
 import random
 import time
 
-db = create_engine('sqlite:///mkemunicourt.db', echo = False)
+db = create_engine('sqlite:///mke_adj_rec.db', echo = False)
 
 Session = sessionmaker(bind = db)
 session = Session()
@@ -21,7 +21,7 @@ ch_opt.add_argument('user-agent = UserAgent().random')
 
 ch_dr = webdriver.Chrome(chrome_options = ch_opt)
 
-def s_mkemunicourt(c_no):
+def s_mke_muni_adj(c_no):
 
     ch_dr.get("https://query.municourt.milwaukee.gov/")
     case_no_in = ch_dr.find_element_by_id("QuerySection_DisclaimerSection_DisclaimerAgree")
@@ -92,6 +92,6 @@ def s_mkemunicourt(c_no):
 
     if c_no < n:
 
-        s_mkemunicourt(c_no + 1)
+        s_mke_muni_adj(c_no + 1)
 
-s_mkemunicourt(n)
+s_mke_muni_adj(n)

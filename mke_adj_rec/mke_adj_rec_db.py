@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Float, ForeignKey, Column, Date, DateTime, String
 from sqlalchemy.ext.declarative import declarative_base
 
-db = create_engine('sqlite:///mkemunicourt.db', echo = False)
+db = create_engine('sqlite:///mke_adj_rec.db', echo = False)
 Base = declarative_base()
 
 class MkeMuniCourt(Base):
