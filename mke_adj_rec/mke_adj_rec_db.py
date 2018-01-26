@@ -8,10 +8,9 @@ class MkeMuniCourt(Base):
 
     __tablename__ = 'mke_muni_court'
 
-    # Defendent Info
+    # Defendant Info
     d_case_no = Column(String, primary_key = True, nullable = False)
     d_name = Column(String)
-    #d_last_known_addr = Column(String)
     d_mo_yr_birth = Column(Date)
     d_sex = Column(String)
     d_race = Column(String)
@@ -43,7 +42,6 @@ class MkeMuniCourt(Base):
     j_penalty, j_balance_due, j_date, j_due_on_date, j_branch):
         self.d_case_no = d_case_no
         self.d_name = d_name
-        #self.d_last_known_addr = d_last_known_addr
         self.d_mo_yr_birth = d_mo_yr_birth
         self.d_sex = d_sex
         self.d_race = d_race
@@ -64,5 +62,50 @@ class MkeMuniCourt(Base):
         self.j_date = j_date
         self.j_due_on_date = j_due_on_date
         self.j_branch = j_branch
+
+class WiCirCourtDefInfo(Base):
+
+    __tablename__ = 'wi_cir_court_di'
+
+    # Defendant Info
+    d_case_no = Column(String, primary_key = True, nullable = False)
+    d_name = Column(String)
+    d_dob = Column(Date)
+    d_sex = Column(String)
+    d_race = Column(String)
+    d_address = Column(String)
+
+    def __init__(self, d_case_no, d_name, d_dob, d_sex, d_race, d_address):
+        self.d_case_no = d_case_no
+        self.d_name = d_name
+        self.d_dob = d_dob
+        self.d_sex = d_sex
+        self.d_race = d_race
+        self.d_address = d_address
+
+class WiCirCourtCaseInfo(Base):
+
+    __tablename__ = "wi_cir_court_ci"
+
+    # Case Info
+    c_case_no = Column(String, ForeignKey('wi_cir_court_di.d_case_no'), primary_key = True, nullable = False)
+    c_case_type = Column(String)
+    c_off_cnt = Column(String, primary_key = True, nullable = False)
+    c_off_date = Column(Date)
+    c_statute = Column(String)
+    c_desc = Column(String)
+    c_severity = Column(String)
+    c_dispo = Column(String)
+
+    def __init__(self, c_case_no, c_case_type, c_off_cnt, c_off_date, c_statute,\
+    c_desc, c_severity, c_dispo):
+        self.c_case_no = c_case_no
+        self.c_case_type = c_case_type
+        self.c_off_cnt = c_off_cnt
+        self.c_off_date = c_off_date
+        self.c_statute = c_statute
+        self.c_desc = c_desc
+        self.c_severity = c_severity
+        self.c_dispo = c_dispo
 
 Base.metadata.create_all(db)
