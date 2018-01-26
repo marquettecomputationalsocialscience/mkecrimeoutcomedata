@@ -3,9 +3,9 @@ Creating a dataset to understand the crime analysis pipeline from mapping to sen
 
 # Adjudication Record Scrapes
 
-| Updated: 2018.01.26
+<p>Update: 2018.01.26</p>
 
-| mke_adj_rec
+mke_adj_rec
 
   | mke_adj_rec_db.py
     | Builds schema
