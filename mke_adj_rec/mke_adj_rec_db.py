@@ -69,19 +69,28 @@ class WiCirCourtDefInfo(Base):
 
     # Defendant Info
     d_case_no = Column(String, primary_key = True, nullable = False)
+    d_case_type = Column(String)
     d_name = Column(String)
     d_dob = Column(Date)
     d_sex = Column(String)
     d_race = Column(String)
     d_address = Column(String)
+    d_filing_date = Column(Date)
+    d_case_status = Column(String)
+    d_branch_id = Column(String)
 
-    def __init__(self, d_case_no, d_name, d_dob, d_sex, d_race, d_address):
+    def __init__(self, d_case_no, d_case_type, d_name, d_dob, d_sex, d_race, d_address,\
+    d_filing_date, d_case_status, d_branch_id):
         self.d_case_no = d_case_no
+        self.d_case_type = d_case_type
         self.d_name = d_name
         self.d_dob = d_dob
         self.d_sex = d_sex
         self.d_race = d_race
         self.d_address = d_address
+        self.d_filing_date = d_filing_date
+        self.d_case_status = d_case_status
+        self.d_branch_id = d_branch_id
 
 class WiCirCourtCaseInfo(Base):
 
@@ -89,7 +98,6 @@ class WiCirCourtCaseInfo(Base):
 
     # Case Info
     c_case_no = Column(String, ForeignKey('wi_cir_court_di.d_case_no'), primary_key = True, nullable = False)
-    c_case_type = Column(String)
     c_off_cnt = Column(String, primary_key = True, nullable = False)
     c_off_date = Column(Date)
     c_statute = Column(String)
@@ -97,10 +105,9 @@ class WiCirCourtCaseInfo(Base):
     c_severity = Column(String)
     c_dispo = Column(String)
 
-    def __init__(self, c_case_no, c_case_type, c_off_cnt, c_off_date, c_statute,\
-    c_desc, c_severity, c_dispo):
+    def __init__(self, c_case_no, c_off_cnt, c_off_date, c_statute, c_desc, c_severity,\
+    c_dispo):
         self.c_case_no = c_case_no
-        self.c_case_type = c_case_type
         self.c_off_cnt = c_off_cnt
         self.c_off_date = c_off_date
         self.c_statute = c_statute
