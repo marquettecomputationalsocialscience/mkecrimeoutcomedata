@@ -441,7 +441,7 @@ def s_wi_cir_adj(c_no):
 
         pass
 
-    if c_no < 250:
+    if c_no < n:
 
         time.sleep(3)
         s_wi_cir_adj(c_no + 1)
@@ -450,4 +450,4 @@ def s_wi_cir_adj(c_no):
 
         ch_dr.close()
 
-s_wi_cir_adj(201)
+s_wi_cir_adj(n)
