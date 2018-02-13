@@ -60,4 +60,4 @@ def mia_mke_muni_adj(case_lst):
 
 case_lst = [int(i[0]) for i in sorted(session.query(MkeMuniCourt.d_case_no).filter(MkeMuniCourt.d_name == None))]
 
-test(case_lst)
+mia_mke_muni_adj(case_lst)
