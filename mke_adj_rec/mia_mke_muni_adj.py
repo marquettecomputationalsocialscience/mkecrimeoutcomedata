@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from mke_adj_rec_db import *
 
 import sys
+import time
 
 sys.setrecursionlimit(100000)
 
@@ -17,7 +18,7 @@ Session = sessionmaker(bind = db)
 session = Session()
 
 ch_opt = webdriver.ChromeOptions()
-ch_opt.add_argument('headless')
+#ch_opt.add_argument('headless')
 ch_opt.add_argument('user-agent = UserAgent().random')
 
 ch_dr = webdriver.Chrome(chrome_options = ch_opt)
@@ -26,7 +27,8 @@ def mia_mke_muni_adj(case_lst):
 
     if type(case_lst) is list:
         for item in case_lst:
-            test(item)
+            mia_mke_muni_adj(item)
+
     else:
 
         ch_dr.get('https://query.municourt.milwaukee.gov/')
@@ -46,17 +48,17 @@ def mia_mke_muni_adj(case_lst):
 
         except:
 
-            d_case_no = ch_dr.find_element_by_xpath('//*[@id="QuerySection_ResultNotFoundSection_lblExplanationFooter"]').text
-            new_record = MiaMkeMuniCourt(d_case_no)
-            session.add(record)
-            session.commit()
+            mia_case_no = ch_dr.find_element_by_xpath('//*[@id="QuerySection_ResultNotFoundSection_lblExplanationFooter"]').text
 
-            old_record = MkeMuniCourt(d_case_no = case_lst)
-            session.delete(old_record)
+            old_record = session.query(MkeMuniCourt).filter(MkeMuniCourt.d_case_no == str(case_lst))
+            old_record.delete()
+
+            new_record = MiaMkeMuniCourt(str(case_lst))
+            session.add(new_record)
+
             session.commit()
 
             print(case_lst, ' does not exist--recorded to proper schema.')
-
 
 case_lst = [int(i[0]) for i in sorted(session.query(MkeMuniCourt.d_case_no).filter(MkeMuniCourt.d_name == None))]
 
