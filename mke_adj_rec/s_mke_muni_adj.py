@@ -12,9 +12,9 @@ import random
 import sys
 import time
 
-sys.setrecursionlimit(20000)
+sys.setrecursionlimit(100000)
 
-db = create_engine('sqlite:///mke_adj_rec.db', echo = False)
+db = create_engine('sqlite:///mke_adj_db/mke_adj_rec.db', echo = False)
 
 Session = sessionmaker(bind = db)
 session = Session()
@@ -35,6 +35,7 @@ def s_mke_muni_adj(c_no):
     case_no.send_keys(c_no)
     time.sleep(2)
     case_no.send_keys(Keys.RETURN)
+    time.sleep(1)
 
     try:
 
@@ -70,10 +71,9 @@ def s_mke_muni_adj(c_no):
         d_3 = datetime.strptime(j_date, f_j_date)
         f_j_due_on_date = '%m/%d/%Y'
         d_4 = datetime.strptime(j_due_on_date, f_j_due_on_date)
-        f_c_deposit_amt = float(c_deposit_amt[1:])
-        f_j_penalty = float(j_penalty[1:])
-        f_j_balance_due = float(j_balance_due[1:])
-
+        f_c_deposit_amt = float(c_deposit_amt[1:].replace(',', ''))
+        f_j_penalty = float(j_penalty[1:].replace(',', ''))
+        f_j_balance_due = float(j_balance_due[1:].replace(',', ''))
 
         record = MkeMuniCourt(c_no, d_name, d_1, d_sex, d_race, c_case_type, c_violation, d_2, c_location,\
         c_plea, c_plea_ent_by, c_status, c_citation_no, f_c_deposit_amt, c_in_collection, c_installment_plan,\
@@ -85,7 +85,8 @@ def s_mke_muni_adj(c_no):
 
     except:
 
-        record = MkeMuniCourt(c_no, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None)
+        record = MkeMuniCourt(c_no, None, None, None, None, None, None, None, None, None, None, None, None,\
+        None, None, None, None, None, None, None, None, None)
         session.add(record)
         session.commit()
 
@@ -93,7 +94,6 @@ def s_mke_muni_adj(c_no):
 
     if c_no < n:
 
-        time.sleep(3)
         s_mke_muni_adj(c_no + 1)
 
     else:
