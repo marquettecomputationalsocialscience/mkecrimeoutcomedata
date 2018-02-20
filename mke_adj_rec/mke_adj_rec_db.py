@@ -208,7 +208,7 @@ class PkMkeMuniCourt(Base):
 
     def __init__(self, d_case_no, d_name, d_mo_yr_birth, d_sex, d_race, c_case_type,\
     c_violation, c_violation_date, c_plea, c_plea_ent_by, c_status, c_deposit_amt,\
-    c_in_collection, c_installment_plan, j_finding, j_penalty, j_balance_due,\ j_date,\
+    c_in_collection, c_installment_plan, j_finding, j_penalty, j_balance_due, j_date,\
     j_due_on_date, j_branch):
         self.d_case_no = d_case_no
         self.d_name = d_name
