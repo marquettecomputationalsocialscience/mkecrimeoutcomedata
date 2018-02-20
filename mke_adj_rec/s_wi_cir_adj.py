@@ -14,7 +14,7 @@ import time
 
 sys.setrecursionlimit(20000)
 
-db = create_engine('sqlite:///mke_adj_rec.db', echo = False)
+db = create_engine('sqlite:///mke_adj_db/mke_adj_rec.db', echo = False)
 
 Session = sessionmaker(bind = db)
 session = Session()
@@ -441,9 +441,294 @@ def s_wi_cir_adj(c_no):
 
         pass
 
+    try:
+
+        c_off_cnt_18 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[18]/td[1]').text
+        c_off_date_18 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[18]/div/div[1]/dl[5]/dd').text
+        c_statute_18 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[18]/td[2]').text
+        c_desc_18 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[18]/td[3]').text
+        c_severity_18 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[18]/td[4]').text
+        c_dispo_18 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[18]/td[5]').text
+
+        f_c_off_date_18 = '%m-%d-%Y'
+        r_c_off_date_18 = datetime.strptime(c_off_date_18, f_c_off_date_18)
+
+        record_18 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_18, r_c_off_date_18, c_statute_18, c_desc_18, c_severity_18, c_dispo_18)
+        session.add(record_18)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 18.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_19 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[19]/td[1]').text
+        c_off_date_19 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[19]/div/div[1]/dl[5]/dd').text
+        c_statute_19 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[19]/td[2]').text
+        c_desc_19 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[19]/td[3]').text
+        c_severity_19 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[19]/td[4]').text
+        c_dispo_19 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[19]/td[5]').text
+
+        f_c_off_date_19 = '%m-%d-%Y'
+        r_c_off_date_19 = datetime.strptime(c_off_date_19, f_c_off_date_19)
+
+        record_19 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_19, r_c_off_date_19, c_statute_19, c_desc_19, c_severity_19, c_dispo_19)
+        session.add(record_19)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 19.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_20 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[20]/td[1]').text
+        c_off_date_20 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[20]/div/div[1]/dl[5]/dd').text
+        c_statute_20 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[20]/td[2]').text
+        c_desc_20 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[20]/td[3]').text
+        c_severity_20 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[20]/td[4]').text
+        c_dispo_20 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[20]/td[5]').text
+
+        f_c_off_date_20 = '%m-%d-%Y'
+        r_c_off_date_20 = datetime.strptime(c_off_date_20, f_c_off_date_20)
+
+        record_20 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_20, r_c_off_date_20, c_statute_20, c_desc_20, c_severity_20, c_dispo_20)
+        session.add(record_20)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 20.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_21 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[21]/td[1]').text
+        c_off_date_21 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[21]/div/div[1]/dl[5]/dd').text
+        c_statute_21 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[21]/td[2]').text
+        c_desc_21 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[21]/td[3]').text
+        c_severity_21 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[21]/td[4]').text
+        c_dispo_21 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[21]/td[5]').text
+
+        f_c_off_date_21 = '%m-%d-%Y'
+        r_c_off_date_21 = datetime.strptime(c_off_date_21, f_c_off_date_21)
+
+        record_21 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_21, r_c_off_date_21, c_statute_21, c_desc_21, c_severity_21, c_dispo_21)
+        session.add(record_21)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 21.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_22 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[22]/td[1]').text
+        c_off_date_22 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[22]/div/div[1]/dl[5]/dd').text
+        c_statute_22 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[22]/td[2]').text
+        c_desc_22 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[22]/td[3]').text
+        c_severity_22 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[22]/td[4]').text
+        c_dispo_22 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[22]/td[5]').text
+
+        f_c_off_date_22 = '%m-%d-%Y'
+        r_c_off_date_22 = datetime.strptime(c_off_date_22, f_c_off_date_22)
+
+        record_22 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_22, r_c_off_date_22, c_statute_22, c_desc_22, c_severity_22, c_dispo_22)
+        session.add(record_22)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 22.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_23 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[23]/td[1]').text
+        c_off_date_23 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[23]/div/div[1]/dl[5]/dd').text
+        c_statute_23 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[23]/td[2]').text
+        c_desc_23 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[23]/td[3]').text
+        c_severity_23 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[23]/td[4]').text
+        c_dispo_23 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[23]/td[5]').text
+
+        f_c_off_date_23 = '%m-%d-%Y'
+        r_c_off_date_23 = datetime.strptime(c_off_date_23, f_c_off_date_23)
+
+        record_23 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_23, r_c_off_date_23, c_statute_23, c_desc_23, c_severity_23, c_dispo_23)
+        session.add(record_23)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 23.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_24 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[24]/td[1]').text
+        c_off_date_24 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[24]/div/div[1]/dl[5]/dd').text
+        c_statute_24 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[24]/td[2]').text
+        c_desc_24 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[24]/td[3]').text
+        c_severity_24 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[24]/td[4]').text
+        c_dispo_24 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[24]/td[5]').text
+
+        f_c_off_date_24 = '%m-%d-%Y'
+        r_c_off_date_24 = datetime.strptime(c_off_date_24, f_c_off_date_24)
+
+        record_24 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_24, r_c_off_date_24, c_statute_24, c_desc_24, c_severity_24, c_dispo_24)
+        session.add(record_24)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 24.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_25 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[25]/td[1]').text
+        c_off_date_25 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[25]/div/div[1]/dl[5]/dd').text
+        c_statute_25 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[25]/td[2]').text
+        c_desc_25 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[25]/td[3]').text
+        c_severity_25 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[25]/td[4]').text
+        c_dispo_25 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[25]/td[5]').text
+
+        f_c_off_date_25 = '%m-%d-%Y'
+        r_c_off_date_25 = datetime.strptime(c_off_date_25, f_c_off_date_25)
+
+        record_25 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_25, r_c_off_date_25, c_statute_25, c_desc_25, c_severity_25, c_dispo_25)
+        session.add(record_25)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 25.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_26 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[26]/td[1]').text
+        c_off_date_26 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[26]/div/div[1]/dl[5]/dd').text
+        c_statute_26 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[26]/td[2]').text
+        c_desc_26 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[26]/td[3]').text
+        c_severity_26 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[26]/td[4]').text
+        c_dispo_26 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[26]/td[5]').text
+
+        f_c_off_date_26 = '%m-%d-%Y'
+        r_c_off_date_26 = datetime.strptime(c_off_date_26, f_c_off_date_26)
+
+        record_26 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_26, r_c_off_date_26, c_statute_26, c_desc_26, c_severity_26, c_dispo_26)
+        session.add(record_26)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 26.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_27 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[27]/td[1]').text
+        c_off_date_27 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[27]/div/div[1]/dl[5]/dd').text
+        c_statute_27 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[27]/td[2]').text
+        c_desc_27 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[27]/td[3]').text
+        c_severity_27 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[27]/td[4]').text
+        c_dispo_27 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[27]/td[5]').text
+
+        f_c_off_date_27 = '%m-%d-%Y'
+        r_c_off_date_27 = datetime.strptime(c_off_date_27, f_c_off_date_27)
+
+        record_27 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_27, r_c_off_date_27, c_statute_27, c_desc_27, c_severity_27, c_dispo_27)
+        session.add(record_27)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 27.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_28 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[28]/td[1]').text
+        c_off_date_28 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[28]/div/div[1]/dl[5]/dd').text
+        c_statute_28 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[28]/td[2]').text
+        c_desc_28 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[28]/td[3]').text
+        c_severity_28 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[28]/td[4]').text
+        c_dispo_28 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[28]/td[5]').text
+
+        f_c_off_date_28 = '%m-%d-%Y'
+        r_c_off_date_28 = datetime.strptime(c_off_date_28, f_c_off_date_28)
+
+        record_28 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_28, r_c_off_date_28, c_statute_28, c_desc_28, c_severity_28, c_dispo_28)
+        session.add(record_28)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 28.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_29 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[29]/td[1]').text
+        c_off_date_29 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[29]/div/div[1]/dl[5]/dd').text
+        c_statute_29 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[29]/td[2]').text
+        c_desc_29 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[29]/td[3]').text
+        c_severity_29 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[29]/td[4]').text
+        c_dispo_29 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[29]/td[5]').text
+
+        f_c_off_date_29 = '%m-%d-%Y'
+        r_c_off_date_29 = datetime.strptime(c_off_date_29, f_c_off_date_29)
+
+        record_29 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_29, r_c_off_date_29, c_statute_29, c_desc_29, c_severity_29, c_dispo_29)
+        session.add(record_29)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 29.')
+
+    except:
+
+        pass
+
+    try:
+
+        c_off_cnt_30 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[30]/td[1]').text
+        c_off_date_30 = ch_dr.find_element_by_xpath('//*[@id="fullCharges"]/div[2]/div[30]/div/div[1]/dl[5]/dd').text
+        c_statute_30 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[30]/td[2]').text
+        c_desc_30 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[30]/td[3]').text
+        c_severity_30 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[30]/td[4]').text
+        c_dispo_30 = ch_dr.find_element_by_xpath('//*[@id="charges"]/div[2]/div[3]/div/dl/dd/table/tbody/tr[30]/td[5]').text
+
+        f_c_off_date_30 = '%m-%d-%Y'
+        r_c_off_date_30 = datetime.strptime(c_off_date_30, f_c_off_date_30)
+
+        record_30 = WiCirCourtCaseInfo(c_no_in, c_off_cnt_30, r_c_off_date_30, c_statute_30, c_desc_30, c_severity_30, c_dispo_30)
+        session.add(record_30)
+        session.commit()
+
+        print(c_no_in, ' entered--offense 30.')
+
+    except:
+
+        pass
+
     if c_no < n:
 
-        time.sleep(3)
         s_wi_cir_adj(c_no + 1)
 
     else:
