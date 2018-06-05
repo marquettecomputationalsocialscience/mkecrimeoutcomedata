@@ -1,3 +1,4 @@
+d_case_no,d_name,d_mo_yr_birth,d_sex,d_race,c_case_type,c_violation,c_violation_date,c_plea,c_plea_ent_by,c_status,c_deposit_amt,c_in_collection,c_installment_plan,j_finding,j_penalty,j_balance_due,j_date,j_due_on_date,j_branch
 14000010,"HELMLE, MARY C",1959-12-01,Female,White,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2013-12-18 17:26:00.000000,Not Guilty,Defendant,Closed,0,No,No,Dismissed without Prejudice,0,0,2014-02-18,2014-02-18,A
 14000018,"MBAH, JEFREY A",1979-11-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2013-11-15 11:01:00.000000,No Contest,Defendant,Closed,0,No,No,Guilty,200,0,2014-01-02,2014-05-12,3
 14000036,"REYNOLDS, JESSE L",1981-10-01,Male,White,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2012-12-20 16:36:00.000000,No Contest,Court,Closed,0,No,No,Guilty,270,0,2014-02-18,2014-04-21,A

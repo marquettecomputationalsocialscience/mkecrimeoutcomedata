@@ -1,3 +1,4 @@
+d_case_no,d_name,d_mo_yr_birth,d_sex,d_race,c_case_type,c_violation,c_violation_date,c_plea,c_plea_ent_by,c_status,c_deposit_amt,c_in_collection,c_installment_plan,j_finding,j_penalty,j_balance_due,j_date,j_due_on_date,j_branch
 12000021,"ARMOUR, DEANDRE A",1978-04-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2011-11-06 17:20:00.000000,No Contest,Court,Closed,0,No,No,Guilty,200,0,2012-04-30,2012-06-29,1
 12000493,"MAHAN, COLETTE A",1983-04-01,Female,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2011-06-22 03:32:00.000000,No Contest,Defendant,Closed,0,No,No,Guilty,164,0,2012-01-20,2013-05-16,1
 12000494,"HOLLEY, TEELA R",1986-06-01,Female,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2010-04-08 09:22:00.000000,No Contest,Defendant,Closed,0,No,No,Guilty,375,0,2012-01-20,2016-01-19,1

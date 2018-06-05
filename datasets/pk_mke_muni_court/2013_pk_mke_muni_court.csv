@@ -1,3 +1,4 @@
+d_case_no,d_name,d_mo_yr_birth,d_sex,d_race,c_case_type,c_violation,c_violation_date,c_plea,c_plea_ent_by,c_status,c_deposit_amt,c_in_collection,c_installment_plan,j_finding,j_penalty,j_balance_due,j_date,j_due_on_date,j_branch
 13000021,"MUNOZ, ALICIA",1965-06-01,Female,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2012-11-02 12:58:00.000000,No Contest,Defendant,Closed,0,No,No,Guilty,100,0,2013-02-19,2013-05-20,A
 13000770,"BURKS, TIMOTHY LAMONT",1984-09-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2012-10-11 05:12:00.000000,No Contest,Court,Closed,0,No,No,Guilty,90,0,2013-01-22,2013-03-25,3
 13000771,"GRIGGS, GLENN L",1972-07-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2012-08-23 18:25:00.000000,No Contest,Court,Closed,0,No,No,Guilty,40,0,2013-01-22,2013-03-25,2

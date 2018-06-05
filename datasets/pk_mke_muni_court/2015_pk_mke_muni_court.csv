@@ -1,3 +1,4 @@
+d_case_no,d_name,d_mo_yr_birth,d_sex,d_race,c_case_type,c_violation,c_violation_date,c_plea,c_plea_ent_by,c_status,c_deposit_amt,c_in_collection,c_installment_plan,j_finding,j_penalty,j_balance_due,j_date,j_due_on_date,j_branch
 15000088,"KOPPS, PAUL R",1957-09-01,Male,White,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2013-11-22 04:19:00.000000,Not Guilty,Defendant,Closed,0,No,No,Dismissed without Prejudice,0,0,2015-01-16,2015-01-16,2
 15000105,"POGREBA, MONIQUE SHARAI",1986-11-01,Female,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2014-11-13 13:45:00.000000,Guilty,Defendant,Closed,0,No,No,Guilty,70,0,2015-01-05,2015-04-06,2
 15000113,"PECARD, MATTHEW C",1981-03-01,Male,White,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2014-11-15 20:01:00.000000,No Plea,,Closed,0,No,No,Dismissed without Prejudice,0,0,2015-01-05,2015-01-05,2

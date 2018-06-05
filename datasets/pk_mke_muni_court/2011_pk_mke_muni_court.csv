@@ -1,3 +1,4 @@
+d_case_no,d_name,d_mo_yr_birth,d_sex,d_race,c_case_type,c_violation,c_violation_date,c_plea,c_plea_ent_by,c_status,c_deposit_amt,c_in_collection,c_installment_plan,j_finding,j_penalty,j_balance_due,j_date,j_due_on_date,j_branch
 11000867,"KAUFERT, HECTOR L",1978-12-01,Male,Hispanic,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2004-02-26 03:56:00.000000,No Contest,Court,Closed,0,No,No,Guilty,400,0,2011-01-24,2013-08-19,2
 11000870,"WILLIAMS, GREGORY L",1984-08-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2009-01-05 13:20:00.000000,No Contest,Court,Closed,0,No,No,Guilty,203.52,0,2011-01-24,2016-04-11,3
 11000873,"KIMBLE, THOMAS",1955-12-01,Male,Black,Parking,"Ordinance 101-34-1, Contested Parking Citation(s)",2010-05-07 02:57:00.000000,No Contest,Court,Closed,0,No,No,Guilty,220,0,2011-01-24,2011-03-25,2
