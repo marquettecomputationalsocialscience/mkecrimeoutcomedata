@@ -63,6 +63,7 @@ def gis_san_lst_0(addr):
                 'N GRA RD': 'N GRANVILLE RD',\
                 'OAK ST E': 'E OAK ST',\
                 'OAK ST W': 'W OAK ST',\
+                '101ST ST N':'N 101ST ST',\
                 '92ND ST S': 'S 92ND ST',\
                 '92ND ST N': 'N 92ND ST',\
                 '91ST ST S': 'S 91ST ST',\
@@ -465,9 +466,34 @@ def gis_san_lst_0(addr):
                 'DR MARTIN LUTHER KING JR DR': 'DOCTOR M.L.K. DR',\
                 'LINCOLN CREEK PKWY W PARK RD': 'LINCOLN CREEK PKWY',\
                 'LIT MEN RIVER PKWY N PARK RD': 'LITTLE MENOMONEE RIVER PKWY',\
-                'BECHER ST W & 2523': '2523 W BECHER ST W'\
+                'BECHER ST W & 2523': '2523 W BECHER ST W',\
                 #'GREEN BAY AVE N / I 43 EXIT RAMP': 'N GREEN BAY AVE & W FIE
-                }
+                
+#Katy's addition, please skim for review
+                'AUER AVE E':'E AUER AVE',\
+                'AUER AVE W':'W AUER AVE',\
+                'BARCLAY ST S': 'S BARCLAY ST',\
+                'BARCLAY ST' : 'S BARCLAY ST',\
+                'BREWER ':'BREWERS WAY',\
+                'BOBOLINK AVE W':'W AVE BOBOLINK',\
+                'ESTABROOK PARK PARK RD' : 'ESTABROOK PKWY',\
+                'ESTABROOK BLV': 'W ESTABROOK BLV',\
+                'FREDERICK MI WAY':'FREDERICK MILLER WAY',\
+                'GRANT BLVD N' : 'N GRANT BLVD',\
+                'GRANTOSA DR W':'W GRANTOSA DR',\
+                'MILL RD W':'W MILL RD',\
+                'SILVERSPRING':'SILVER SPRING',\
+                '6 ST':'6TH ST',\
+                '11 ST':'11TH ST',\
+                '37 ST':'37TH ST',\
+                '48 ST':'48TH ST',\
+                '84 ST':'84TH ST',\
+                '96 ST':'96TH ST',\
+                '@':'&',\
+                'ON ':'',\
+                'PRIVATE PROPERTY':''\
+
+ }
 
     pattern = re.compile('|'.join(san_lst.keys()))
     #pattern = re.compile(r'\b(' + '|'.join(san_lst.keys()) + r')\b')
@@ -506,6 +532,7 @@ def gis_san_lst_1(addr):
                 'S HOWELL AVE & 4368': '4368 S HOWELL AVE',\
                 'S LAYTON BLVD & 1619': '1619 S LAYTON BLVD',\
                 'W BECHER ST & 2523': '2523 W BECHER ST',\
+                'W CAPITOL DR & 2700': '2700 W CAPITOL DR',\
                 'W CENTER ST & 2900':'2900 W CENTER ST',\
                 'W CENTER ST & 3900':'3900 W CENTER ST',\
                 'W CONGRESS ST & 6730': '6730 W CONGRESS ST',\
@@ -526,9 +553,11 @@ def gis_san_lst_1(addr):
                 'W NATIONAL AVE & 2600': '2600 W NATIONAL AVE',\
                 'W OKLAHOMA AVE & 3422': '3422 W OKLAHOMA AVE',\
                 'W VLIET ST & 3500':'3500 W VLIET ST',\
+                'W VILLARD AVE & 3629':'3629 W VILLARD AVE',\
                 'W WISCONSIN AVE & 3900': '3900 W WISCONSIN AVE',\
                 'W WISCONSIN AVE & 4200': '4200 W WISCONSIN AVE',\
-                '5010 N 37TH ST &': '5010 N 37TH ST'\
+                '5010 N 37TH ST &': '5010 N 37TH ST',\
+                'N 51ST ST & 4500':'4500 N 51ST ST'\ 
                 }
 
     pattern = re.compile('|'.join(san_lst.keys()))
