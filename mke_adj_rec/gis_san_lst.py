@@ -2,7 +2,7 @@ import re
 
 def gis_san_lst_0(addr):
 
-    san_lst = {'CTH N/ ': '',\
+    san_lst = {'@' : '&',\
                 'INTERSTATE 043 SOUTH/': '',\
                 '1ST S / 4626': '4626 1ST ST',\
                 'I 94/ 27TH ST N': 'W ST PAUL AVE & N 27TH ST',\
@@ -15,10 +15,10 @@ def gis_san_lst_0(addr):
                 '/': '&',\
                 ' A 304 ': ' ',\
                 ' AV 112 ': ' AVE ',\
-                'NB': '',\
-                'SB': '',\
-                'EB': '',\
-                'WB': '',\
+                #'NB': '',\
+                #'SB': '',\
+                #'EB': '',\
+                #'WB': '',\
                 ' 4 ': ' ',\
                 ' A ': ' ',\
                 'BLK': '',\
@@ -32,6 +32,7 @@ def gis_san_lst_0(addr):
                 'SB ': '',\
                 'EB ': '',\
                 'WB ': '',\
+                '6 ST': '6TH ST',\
                 '6 TH': '6TH',\
                 ' AV ': ' AVE ',\
                 'BLCK': '',\
@@ -45,6 +46,11 @@ def gis_san_lst_0(addr):
                 ' SB ': '',\
                 ' EB ': '',\
                 ' WB ': '',\
+                '11 ST': '11TH ST',\
+                '37 ST': '37TH ST',\
+                '48 ST': '48TH ST',\
+                '84 ST': '84TH ST',\
+                '96 ST': '96TH ST',\
                 ' BLK ': '',\
                 'BLCK ': '',\
                 ' BLCK': '',\
@@ -57,6 +63,7 @@ def gis_san_lst_0(addr):
                 ' BLOCK': '',\
                 'VLILET': 'VLIET',\
                 ' BLOCK ': '',\
+                'BREWER ': 'BREWERS WAY',\
                 'N 27 ST': 'N 27TH ST',\
                 'S 27 ST': 'S 27TH ST',\
                 'MINERALD': 'MINERAL',\
@@ -213,6 +220,7 @@ def gis_san_lst_0(addr):
                 '1ST PL N': 'N 1ST PL',\
                 'KANE PL E': 'E KANE PL',\
                 'KANE PL W': 'W KANE PL',\
+                'MILL RD W': 'W MILL RD',\
                 'RING ST E': 'E RING ST',\
                 'RING ST W': 'W RING ST',\
                 '5679 S 27': '5679 S 27TH ST',\
@@ -220,6 +228,8 @@ def gis_san_lst_0(addr):
                 'WESTBOUND': '',\
                 'NORTHBOUND': '',\
                 'SOUTHBOUND': '',\
+                'AUER AVE E': 'E AUER AVE',\
+                'AUER AVE W': 'W AUER AVE',\
                 'S 27TH STR': 'S 27TH ST',\
                 'BROWN ST E': 'E BROWN ST',\
                 'BROWN ST W': 'W BROWN ST',\
@@ -259,6 +269,7 @@ def gis_san_lst_0(addr):
                 'WELLS ST W': 'W WELLS ST',\
                 '58TH BLVD N': 'N 58TH BLVD',\
                 '58TH BLVD S': 'S 58TH BLVD',\
+                ' ALLEY REAR': '',\
                 'AUSTIN ST N': 'N AUSTIN ST',\
                 'AUSTIN ST S': 'S AUSTIN ST',\
                 'CHASE AVE N': 'N CHASE AVE',\
@@ -304,7 +315,8 @@ def gis_san_lst_0(addr):
                 'WRIGHT ST W': 'W WRIGHT ST',\
                 'ARMOUR AVE E': 'E ARMOUR AVE',\
                 'ARMOUR AVE W': 'W ARMOUR AVE',\
-
+                'BARCLAY ST N': 'N BARCLAY ST',\
+                'BARCLAY ST S': 'S BARCLAY ST',\
                 'BURNHAM ST E': 'E BURNHAM ST',\
                 'BURNHAM ST W': 'W BURNHAM ST',\
                 'DAKOTA AVE E': 'E DAKOTA AVE',\
@@ -319,6 +331,7 @@ def gis_san_lst_0(addr):
                 'LISBON AVE W': 'W LISBON AVE',\
                 'MELVINA ST E': 'E MELVINA ST',\
                 'MELVINA ST W': 'W MELVINA ST',\
+                'GRANT BLVD N': 'N GRANT BLVD',\
                 'HANSON AVE N': 'N HANSON AVE',\
                 'HANSON AVE S': 'S HANSON AVE',\
                 'HOPKINS ST N': 'N HOPKINS ST',\
@@ -333,6 +346,7 @@ def gis_san_lst_0(addr):
                 'MORGAN AVE W': 'W MORGAN AVE',\
                 'SERVITE DR N': 'N SERVITE DR',\
                 'SERVITE DR S': 'S SERVITE DR',\
+                'SILVERSPRING': 'SILVER SPRING',\
                 'WEBSTER PL E': 'E WEBSTER PL',\
                 'WEBSTER PL W': 'W WEBSTER PL',\
                 'BROOKLYN PL E': 'E BROOKLYN PL',\
@@ -345,8 +359,10 @@ def gis_san_lst_0(addr):
                 'CLYBOURN ST W': 'W CLYBOURN ST',\
                 'CONGRESS ST E': 'E CONGRESS ST',\
                 'CONGRESS ST W': 'W CONGRESS ST',\
+                'ESTABROOK BLV': 'W ESTABROOK BLVD',\
                 'FLORIST AVE E': 'E FLORIST AVE',\
                 'FLORIST AVE W': 'W FLORIST AVE',\
+                'GRANTOSA DR W': 'W GRANTOSA DR',\
                 'HAMPTON AVE E': 'E HAMPTON AVE',\
                 'HAMPTON AVE W': 'W HAMPTON AVE',\
                 'LAYTON BLVD N': 'N LAYTON BLVD',\
@@ -374,6 +390,8 @@ def gis_san_lst_0(addr):
                 '3613 N 58TH BL': '3613 N 58TH BLVD',\
                 'APPLETON AVE W': 'W APPLETON AVE',\
                 'APPLETON AVE E': 'E APPLETON AVE',\
+                'BOBOLINK AVE E': 'E BOBOLINK AVE',\
+                'BOBOLINK AVE W': 'W BOBOLINK AVE',\
                 'DELAWARE AVE N': 'N DELAWARE AVE',\
                 'DELAWARE AVE S': 'S DELAWARE AVE',\
                 'EDGERTON AVE E': 'E EDGERTON AVE',\
@@ -428,12 +446,15 @@ def gis_san_lst_0(addr):
                 'WISCONSIN AVE W': 'W WISCONSIN AVE',\
                 'WASHINGTON ST E': 'E WASHINGTON ST',\
                 'WASHINGTON ST W': 'W WASHINGTON ST',\
+                'FREDERICK MI WAY': 'FREDERICK MILLER WAY',\
                 'GREENFIELD AVE E': 'E GREENFIELD AVE',\
                 'GREENFIELD AVE W': 'W GREENFIELD AVE',\
                 'KEEFE AVE PKWY E': 'E KEEFE AVE PKWY',\
                 'KEEFE AVE PKWY W': 'W KEEFE AVE PKWY',\
                 'PLAINFIELD AVE E': 'E PLAINFIELD AVE',\
                 'PLAINFIELD AVE W': 'W PLAINFIELD AVE',\
+                'PRIVATE PROPERTY': '',\
+                'W FON DU LAC AVE': 'W FOND DU LAC AV',\
                 'N CESAR CHAVEZ DR': 'N CESAR E CHAVEZ DR',\
                 'S CESAR CHAVEZ DR': 'S CESAR E CHAVEZ DR',\
                 'FOND DU LAC AVE E': 'E FOND DU LAC AVE',\
@@ -461,6 +482,7 @@ def gis_san_lst_0(addr):
                 'SHERMAN CONNECTOR RDS': 'SHERMAN BLVD',\
                 'HISTORIC MITCHELL ST E': 'E HISTORIC MITCHELL ST',\
                 'HISTORIC MITCHELL ST W': 'W HISTORIC MITCHELL ST',\
+                'ESTABROOK PARK PARK RD': 'ESTABROOK PKWY',\
                 'MARTIN LUTHER KING J DRV': 'DOCTOR M.L.K. DR',\
                 'DR MARTIN LUTHER KING JR DR': 'DOCTOR M.L.K. DR',\
                 'LINCOLN CREEK PKWY W PARK RD': 'LINCOLN CREEK PKWY',\
