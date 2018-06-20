@@ -478,11 +478,16 @@ def gis_san_lst_0(addr):
                 'BOBOLINK AVE W':'W AVE BOBOLINK',\
                 'ESTABROOK PARK PARK RD' : 'ESTABROOK PKWY',\
                 'ESTABROOK BLV': 'W ESTABROOK BLV',\
+                'FARWELL AVE N':'N FARWELL AVE',\
                 'FREDERICK MI WAY':'FREDERICK MILLER WAY',\
                 'GRANT BLVD N' : 'N GRANT BLVD',\
                 'GRANTOSA DR W':'W GRANTOSA DR',\
                 'MILL RD W':'W MILL RD',\
+                'LAFAYETTE PL E':'E LAFAYETTE PL',\
+                'LIT MEN RIVER PKWY N PARK RD':'MENOMONEE RIVER PKWY',\
                 'SILVERSPRING':'SILVER SPRING',\
+                'ST PAUL AVE W':'W ST PAUL AVE',\ 
+                'WOODSTOCK PL E':'E WOODSTOCK PL',\
                 '6 ST':'6TH ST',\
                 '11 ST':'11TH ST',\
                 '37 ST':'37TH ST',\
@@ -491,6 +496,12 @@ def gis_san_lst_0(addr):
                 '96 ST':'96TH ST',\
                 '@':'&',\
                 'ON ':'',\
+                '4471 & N 60TH ST':'4471 N 60TH ST',\
+                'HOYT PL W':'W HOYT PL',\
+                'EUCLID AVE W':'W EUCLID AVE',\
+                'FALKNER':'FAULKNER',\
+                '3475 & N 27TH ST':'3475 N 27TH ST',\
+                '3620 & N 27TH ST': '3620 N 27TH ST',\
                 'PRIVATE PROPERTY':''\
 
  }
