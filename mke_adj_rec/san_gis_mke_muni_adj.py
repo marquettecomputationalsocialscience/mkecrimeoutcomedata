@@ -17,7 +17,7 @@ db = create_engine('sqlite:///mke_adj_db/mke_adj_rec.db', echo = False)
 Session = sessionmaker(bind = db)
 session = Session()
 
-gm = googlemaps.Client(key = 'key')
+gm = googlemaps.Client(key = 'api_key')
 
 def san_gis_mke_muni_adj(case_lst):
 
@@ -25,7 +25,6 @@ def san_gis_mke_muni_adj(case_lst):
         for case in case_lst:
             san_gis_mke_muni_adj(case)
             print(case, ' passed @ ', datetime.time(datetime.now()))
-            time.sleep(1)
 
     else:
 
@@ -42,7 +41,7 @@ def san_gis_mke_muni_adj(case_lst):
             gf_addr = gc[0]['formatted_address']
 
             session.query(GisMkeMuniCourt).filter(GisMkeMuniCourt.g_case_no == case_lst).update({\
-            'g_lat': lat, 'g_lng': lng, 'f_addr': f_addr, 'gf_addr': gf_addr})
+            'y_lat': lat, 'x_lng': lng, 'f_addr': f_addr, 'gf_addr': gf_addr})
             session.commit()
 
             print(case_lst, ' modified--recorded to its original schema.')
@@ -52,8 +51,8 @@ def san_gis_mke_muni_adj(case_lst):
             print(c_no, ' has conflicts.')
             pass
 
-gis_case_lst = [int(i[0]) for i in sorted(session.query(GisMkeMuniCourt.g_case_no).filter(GisMkeMuniCourt.g_lat == 0, GisMkeMuniCourt.g_lng == 0,))]
+if __name__ == '__main__':
 
-gis_case_lst = []
-
-san_gis_mke_muni_adj(sorted(gis_case_lst))
+    gis_case_lst = [int(i[0]) for i in sorted(session.query(GisMkeMuniCourt.g_case_no).filter(GisMkeMuniCourt.y_lat == 0, GisMkeMuniCourt.x_lng == 0,))]
+    gis_case_lst = []
+    san_gis_mke_muni_adj(sorted(gis_case_lst))

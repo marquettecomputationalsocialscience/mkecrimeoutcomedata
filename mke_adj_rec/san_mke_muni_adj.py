@@ -30,19 +30,19 @@ def san_mke_muni_adj(case_lst):
     if type(case_lst) is list:
         for item in case_lst:
             san_mke_muni_adj(item)
-            print(item, ' passed.')
+            print(item, ' passed @ ', datetime.time(datetime.now()))
 
     else:
 
         ch_dr.get('https://query.municourt.milwaukee.gov/')
         case_no_in = ch_dr.find_element_by_id('QuerySection_DisclaimerSection_DisclaimerAgree')
-        time.sleep(2)
+        #time.sleep(2)
         case_no_in.send_keys(Keys.RETURN)
         case_no = ch_dr.find_element_by_id('QuerySection_MainSearchSection_txtCaseNumber')
         case_no.send_keys(case_lst)
-        time.sleep(2)
+        #time.sleep(2)
         case_no.send_keys(Keys.RETURN)
-        time.sleep(2)
+        #time.sleep(2)
 
         try:
 
@@ -144,10 +144,13 @@ def san_mke_muni_adj(case_lst):
 
         try:
 
-            qual_1 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblCitationLabel').text
-            qual_2 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblAddress').text
+            #qual_1 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblCitationLabel').text
+            #qual_2 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblAddress').text
+            qual_1 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblBirthDate').text
+            qual_2 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblSex').text
+            qual_3 = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblRace').text
 
-            if qual_1 == 'Service Order #:' and qual_2 != 'N/A':
+            if [qual_1, qual_2, qual_3] == ['N/A', 'N/A', 'N/A']:
 
                 d_name = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblDefendantName').text
                 d_last_kno_addr = ch_dr.find_element_by_id('QuerySection_CaseDetailSection_lblAddress').text
@@ -213,6 +216,6 @@ def san_mke_muni_adj(case_lst):
 
             pass
 
-case_lst = [int(i[0]) for i in sorted(session.query(MkeMuniCourt.d_case_no).filter(MkeMuniCourt.d_name == None))]
-
-san_mke_muni_adj(case_lst)
+if __name__ == '__main__':
+    case_lst = [int(i[0]) for i in sorted(session.query(MkeMuniCourt.d_case_no).filter(MkeMuniCourt.d_name == None))]
+    san_mke_muni_adj(case_lst)

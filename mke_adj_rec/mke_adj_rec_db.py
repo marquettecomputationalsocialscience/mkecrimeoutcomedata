@@ -231,6 +231,33 @@ class PkMkeMuniCourt(Base):
         self.j_due_on_date = j_due_on_date
         self.j_branch = j_branch
 
+class GisMkeMuniCourt(Base):
+
+    __tablename__ = 'gis_mke_muni_court'
+
+    g_case_no = Column(String, ForeignKey('mke_muni_court.d_case_no'), primary_key = True, nullable = False)
+    y_lat = Column(Float, primary_key = True)
+    x_lng = Column(Float, primary_key = True)
+    f_addr = Column(String)
+    gf_addr = Column(String)
+
+    c_case_type = Column(String)
+    c_violation = Column(String)
+    c_violation_date = Column(DateTime)
+    j_finding = Column(String)
+
+    def __init__(self, g_case_no, y_lat, x_lng, f_addr, gf_addr, c_case_type, c_violation,\
+    c_violation_date, j_finding):
+        self.g_case_no = g_case_no
+        self.y_lat = y_lat
+        self.x_lng = x_lng
+        self.f_addr = f_addr
+        self.gf_addr = gf_addr
+        self.c_case_type = c_case_type
+        self.c_violation = c_violation
+        self.c_violation_date = c_violation_date
+        self.j_finding = j_finding
+
 class WiCirCourtDefInfo(Base):
 
     __tablename__ = 'wi_cir_court_di'
