@@ -591,6 +591,18 @@ def gis_san_lst_1(addr):
                 'W WISCONSIN AVE & 4200': '4200 W WISCONSIN AVE',\
                 '5010 N 37TH ST &': '5010 N 37TH ST',\
                 'N 51ST ST & 4500':'4500 N 51ST ST'\ 
+
+                #Laura's addition 6/21
+                '517 N 33 RD ST REAR OF ':'517 N 33RD ST',\
+                'WIS':'WISCONSIN',\
+                '#108':'',\
+                '100TH REAR':'100TH ST',\
+                '3908 N ST':'3908 N 83RD ST',\
+                '3001 E LINWOOD':'3001 E LINNWOOD AVE',\
+                'PLEASANT ST BRIDGE &':'372 E PLEASANT ST',\
+                '1018 W GREENFIELD AVE REAR':'1018 W GREENFIELD AVE',\
+                '8350 N STEVENS':'8350 N STEVEN RD',\
+                '2605 W VICTOR LN':'2605 W VICTORY LN',\
                 }
 
     pattern = re.compile('|'.join(san_lst.keys()))
